@@ -1,0 +1,15 @@
+CC = gcc
+CFLAGS = -Wall -Wextra
+
+TARGET = client
+SRCS = client.c
+
+.PHONY: all clean
+
+all: $(TARGET)
+
+$(TARGET): $(SRCS)
+	$(CC) $(CFLAGS) $^ -o $@
+
+clean:
+	rm -f $(TARGET)
